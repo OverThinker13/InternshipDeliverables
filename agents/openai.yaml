@@ -1,0 +1,5 @@
+interface:
+  display_name: "锦华活动埋点复盘"
+  short_description: "复盘锦华活动曝光、参与、充值埋点的架构、可靠性与面试表达"
+  default_prompt: "Use $review-jinhua-activity-tracking to explain and review the JinHua activity tracking implementation."
+
