@@ -13,11 +13,12 @@ Produce a durable, evidence-based task archive. Assume the user may later have n
 2. Read `references/logic-chain-capture.md` before inspecting or documenting code.
 3. Inspect the current task, relevant source, diffs, configurations, protocols, tests, and history while access still exists.
 4. Create the deliverable under `E:/实习产出/<task-name>/` unless the user gives another location.
-5. Make every Markdown file self-contained. Do not rely on clickable source paths as the only explanation.
-6. Preserve a complete logic chain from external trigger to final result, including representative sanitized code or faithful pseudocode.
-7. Read `references/output-templates.md` and create the required Markdown set.
-8. Read `references/resume-interview.md` before writing resume or interview material.
-9. Run the completeness gate in `references/deliverable-spec.md`; keep investigating until every applicable item is answered or explicitly marked unknown.
+5. Use the exact numbered Chinese Markdown filenames defined in `references/deliverable-spec.md`. Do not invent aliases, English filenames, spaces, dates, or task names inside individual filenames.
+6. Make every Markdown file self-contained. Do not rely on clickable source paths as the only explanation.
+7. Preserve a complete logic chain from external trigger to final result, including representative sanitized code or faithful pseudocode.
+8. Read `references/output-templates.md` and create the required Markdown set.
+9. Read `references/resume-interview.md` before writing resume or interview material.
+10. Run the completeness gate in `references/deliverable-spec.md`; keep investigating until every applicable item is answered or explicitly marked unknown.
 
 ## Non-Negotiable Logic Requirement
 
@@ -46,5 +47,4 @@ Preserve logic, not secrets. Remove credentials, tokens, personal data, private 
 - Include mistakes, risks, limitations, and possible improvements.
 - Use diagrams or tables only when they materially clarify a multi-step chain.
 - Update an existing archive instead of creating conflicting duplicate versions.
-
 
