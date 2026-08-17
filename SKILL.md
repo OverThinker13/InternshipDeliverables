@@ -1,41 +1,50 @@
 ---
-name: review-jinhua-activity-tracking
-description: Review, explain, audit, extend, or prepare interview material for the JinHua Unity activity exposure, participation, and recharge tracking system. Use when working with ActivityTrackManager, activity tracking web APIs, Promotion/EPromotion activity attribution, recharge-order tracking, HD活动控制表.xlsx, tracking coverage, deduplication, reliability, resume bullets, or interview answers about this project.
+name: create-internship-deliverables
+description: Create self-contained internship or project-task deliverables that remain useful after source-code access is lost. Use when Codex should archive a completed or ongoing development task, preserve the complete logic and code chain, generate learning notes, summarize architecture and effects, produce resume bullets, prepare STAR interview answers, or update an existing task archive before leaving a company or project.
 ---
 
-# Review JinHua Activity Tracking
+# Create Internship Deliverables
 
-Base every explanation on the current repository at `E:/JinHua`; do not rely only on this snapshot when code may have changed.
+Produce a durable, evidence-based task archive. Assume the user may later have no repository, environment, chat history, or colleague available.
 
-## Workflow
+## Required Workflow
 
-1. Read `references/task-overview.md` to recover the business goal, scope, result, and configuration relationship.
-2. Read `references/implementation.md` before explaining code, debugging, extending tracking, or reviewing data correctness.
-3. Read `references/interview-guide.md` when preparing a resume, self-introduction, project story, or interviewer Q&A.
-4. Inspect the current versions and diffs of the files named in those references.
-5. Separate verified engineering effects from unverified business metrics. Never invent conversion-rate or revenue improvements.
-6. When code and this skill disagree, treat code and backend contracts as authoritative and update the skill afterward.
+1. Read `references/deliverable-spec.md` and follow its output contract.
+2. Read `references/logic-chain-capture.md` before inspecting or documenting code.
+3. Inspect the current task, relevant source, diffs, configurations, protocols, tests, and history while access still exists.
+4. Create the deliverable under `E:/实习产出/<task-name>/` unless the user gives another location.
+5. Make every Markdown file self-contained. Do not rely on clickable source paths as the only explanation.
+6. Preserve a complete logic chain from external trigger to final result, including representative sanitized code or faithful pseudocode.
+7. Read `references/output-templates.md` and create the required Markdown set.
+8. Read `references/resume-interview.md` before writing resume or interview material.
+9. Run the completeness gate in `references/deliverable-spec.md`; keep investigating until every applicable item is answered or explicitly marked unknown.
 
-## Review Checklist
+## Non-Negotiable Logic Requirement
 
-- Trace the three event types separately: exposure, participation, recharge.
-- Identify the real trigger, request payload, endpoint, deduplication rule, success condition, and retry behavior.
-- Confirm `promotion_id`, `is_operate`, activity time range, role, server, channel, and order attribution.
-- Verify special activities that bypass the normal `Promotion` UI path.
-- Check `xlsx/Datas/HD活动/HD活动控制表.xlsx`, generated `Residentactivities`, and `EPromotion.cs` for synchronization.
-- Check recharge order registration before payment and confirmation after payment delivery.
-- Preserve user changes and avoid editing generated Luban files directly.
+Never finish with only a feature summary or file list. Record enough detail for a capable developer to reconstruct the design without the original source:
 
-## Expected Outputs
+- entry and trigger;
+- ordered call chain with class and method responsibilities;
+- core data structures and important fields;
+- state changes and lifecycle;
+- configuration, network, persistence, async, and platform paths;
+- success, failure, retry, deduplication, and edge branches;
+- key code excerpts or sanitized pseudocode;
+- final observable result and verification evidence.
 
-For a learning review, explain the system in this order:
+If any link is missing, label the gap and inspect further. Do not invent missing code.
 
-1. Why the task was needed.
-2. What architecture was chosen.
-3. How each event travels from trigger to backend.
-4. How duplicate reporting and payment loss are handled.
-5. What coverage and configuration boundaries remain.
-6. What measurable engineering result was achieved.
-7. How to describe the work in a resume and defend it in an interview.
+## Confidentiality
+
+Preserve logic, not secrets. Remove credentials, tokens, personal data, private endpoints, internal hostnames, unreleased assets, and unnecessary proprietary code. Prefer minimal representative snippets and accurate pseudocode when output may be published. State what was sanitized.
+
+## Quality Rules
+
+- Distinguish verified facts, reasoned conclusions, and unknowns.
+- Separate engineering effects from unverified business metrics.
+- Explain why decisions were made and what alternatives or tradeoffs existed.
+- Include mistakes, risks, limitations, and possible improvements.
+- Use diagrams or tables only when they materially clarify a multi-step chain.
+- Update an existing archive instead of creating conflicting duplicate versions.
 
 
