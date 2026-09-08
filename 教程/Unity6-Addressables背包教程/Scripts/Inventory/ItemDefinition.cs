@@ -1,0 +1,2 @@
+using UnityEngine; using UnityEngine.AddressableAssets;
+namespace Demo.Inventory { [CreateAssetMenu(menuName="Inventory/Item Definition")] public sealed class ItemDefinition:ScriptableObject { public int itemId; public string itemName; [TextArea] public string description; public ItemCategory category; public ItemRarity rarity; public AssetReferenceSprite iconReference; public bool stackable=true; public int maxStack=99; public bool usable; public bool sellable; public int sellPrice; } }
